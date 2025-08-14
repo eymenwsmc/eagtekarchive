@@ -1,1 +1,205 @@
-hello world
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minecraft Eaglercraft Version Archive</title>
+<link rel="stylesheet" href="styles.css">
+<script>
+function showPopup(name){
+  const baseName = name.replace('.html',''); // Dosya adından .html kısmını çıkar
+  const popup = document.createElement('div');
+  popup.style.position='fixed';
+  popup.style.top='0'; popup.style.left='0';
+  popup.style.width='100%'; popup.style.height='100%';
+  popup.style.background='rgba(0,0,0,0.85)';
+  popup.style.color='#66fcf1'; popup.style.display='flex';
+  popup.style.flexDirection='column'; popup.style.alignItems='center';
+  popup.style.justifyContent='center';
+  popup.style.zIndex='9999';
+  popup.innerHTML=`
+    <h2>${baseName} - Choose version</h2>
+    <button onclick="window.location.href='${baseName}js.html'" style="margin:8px;padding:8px 16px;">JS</button>
+    <button onclick="window.location.href='${baseName}wasm.html'" style="margin:8px;padding:8px 16px;">WASM</button>
+    <button onclick="document.body.removeChild(this.parentElement)" style="margin-top:12px;padding:6px 12px;">Close</button>
+  `;
+  document.body.appendChild(popup);
+}
+
+</script>
+</head>
+<body>
+<h1>Eaglercraft Version Archive</h1>
+<div class="container">
+
+<article class="card">
+  <span class="badge">Release</span>
+  <h3>1.12.2</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="javascript:showPopup('release/1.12.2.html')">PLAY</a>
+  <a class="btn download" href="javascript:showPopup('release/1.12.2.html')">DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Release</span>
+  <h3>1.8.8</h3>
+  <div>Author: Ayunami2000 & lax1dude</div>
+  <a class="btn play" href="javascript:showPopup('release/1.8.8.html')">PLAY</a>
+  <a class="btn download" href="javascript:showPopup('release/1.8.8.html')">DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Release</span>
+  <h3>1.6.4</h3>
+  <div>Author: CatFoolYou</div>
+  <a class="btn play" href="release/1.6.4.html">PLAY</a>
+  <a class="btn download" href="release/1.6.4.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Release</span>
+  <h3>1.5.2</h3>
+  <div>Author: Ayunami2000 & lax1dude</div>
+  <a class="btn play" href="release/1.5.2.html">PLAY</a>
+  <a class="btn download" href="release/1.5.2.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Release</span>
+  <h3>1.2.5</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="release/1.2.5.html">PLAY</a>
+  <a class="btn download" href="release/1.2.5.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.7.3</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="beta/1.7.3.html">PLAY</a>
+  <a class="btn download" href="beta/1.7.3.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.6.4</h3>
+  <div>Author: EymenWSMC</div>
+  <a class="btn play" href="beta/1.6.4.html">PLAY</a>
+  <a class="btn download" href="beta/1.6.4.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.5_01</h3>
+  <div>Author: EymenWSMC</div>
+  <a class="btn play" href="beta/1.5_01.html">PLAY</a>
+  <a class="btn download" href="beta/1.5_01.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.4_01</h3>
+  <div>Author: CatFoolYou</div>
+  <a class="btn play" href="beta/1.4_01.html">PLAY</a>
+  <a class="btn download" href="beta/1.4_01.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.3</h3>
+  <div>Author: lax1dude</div>
+  <a class="btn play" href="beta/1.3.html">PLAY</a>
+  <a class="btn download" href="beta/1.3.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.2_02</h3>
+  <div>Author: CatFoolYou</div>
+  <a class="btn play" href="beta/1.2_02.html">PLAY</a>
+  <a class="btn download" href="beta/1.2_02.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Beta</span>
+  <h3>1.1_02</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="beta/1.1_02.html">PLAY</a>
+  <a class="btn download" href="beta/1.1_02.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Alpha</span>
+  <h3>1.2.6</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="alpha/1.2.6.html">PLAY</a>
+  <a class="btn download" href="alpha/1.2.6.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Alpha</span>
+  <h3>1.1.2_01</h3>
+  <div>Author: CatFoolYou</div>
+  <a class="btn play" href="alpha/1.1.2_01.html">PLAY</a>
+  <a class="btn download" href="alpha/1.1.2_01.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Alpha</span>
+  <h3>1.0.6_03</h3>
+  <div>Author: EymenWSMC</div>
+  <a class="btn play" href="alpha/1.0.6_03.html">PLAY</a>
+  <a class="btn download" href="alpha/1.0.6_03.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Infdev</span>
+  <h3>Infdev</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="javascript:showPopup('infdev/Infdev.html')">PLAY</a>
+  <a class="btn download" href="javascript:showPopup('infdev/Infdev.html')">DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Indev</span>
+  <h3>Indev</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="indev/Indev.html">PLAY</a>
+  <a class="btn download" href="indev/Indev.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Classic</span>
+  <h3>0.31</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="classic/0.31.html">PLAY</a>
+  <a class="btn download" href="classic/0.31.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Classic</span>
+  <h3>0.30</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="javascript:showPopup('classic/0.30.html')">PLAY</a>
+  <a class="btn download" href="javascript:showPopup('classic/0.30.html')">DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Classic</span>
+  <h3>0.23</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="classic/0.23.html">PLAY</a>
+  <a class="btn download" href="classic/0.23.html" download>DOWNLOAD</a>
+</article>
+
+<article class="card">
+  <span class="badge">Classic</span>
+  <h3>0.21 (Lost)</h3>
+  <div>Author: PeytonPlayz585</div>
+  <a class="btn play" href="classic/0.21 (Lost).html">PLAY</a>
+  <a class="btn download" href="classic/0.21 (Lost).html" download>DOWNLOAD</a>
+</article>
+
+</div>
+</body>
+</html>
