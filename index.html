@@ -6,8 +6,8 @@
 <title>Minecraft Eaglercraft Version Archive</title>
 <link rel="stylesheet" href="styles.css">
 <script>
-function showPopup(name){
-  const baseName = name.replace('.html',''); // Dosya adından .html kısmını çıkar
+function showPopup(name, action){
+  const baseName = name.replace('.html','');
   const popup = document.createElement('div');
   popup.style.position='fixed';
   popup.style.top='0'; popup.style.left='0';
@@ -17,35 +17,49 @@ function showPopup(name){
   popup.style.flexDirection='column'; popup.style.alignItems='center';
   popup.style.justifyContent='center';
   popup.style.zIndex='9999';
+
+  let jsAction = action === 'play' 
+    ? `window.location.href='${baseName}js.html'` 
+    : `window.location.href='${baseName}js.html';`;
+  
+  let wasmAction = action === 'play' 
+    ? `window.location.href='${baseName}wasm.html'` 
+    : `window.location.href='${baseName}wasm.html';`;
+
+  if(action === 'download'){
+    jsAction = `const a=document.createElement('a');a.href='${baseName}js.html';a.download='';document.body.appendChild(a);a.click();a.remove();`;
+    wasmAction = `const a=document.createElement('a');a.href='${baseName}wasm.html';a.download='';document.body.appendChild(a);a.click();a.remove();`;
+  }
+
   popup.innerHTML=`
     <h2>${baseName} - Choose version</h2>
-    <button onclick="window.location.href='${baseName}js.html'" style="margin:8px;padding:8px 16px;">JS</button>
-    <button onclick="window.location.href='${baseName}wasm.html'" style="margin:8px;padding:8px 16px;">WASM</button>
+    <button onclick="${jsAction}" style="margin:8px;padding:8px 16px;">JS</button>
+    <button onclick="${wasmAction}" style="margin:8px;padding:8px 16px;">WASM</button>
     <button onclick="document.body.removeChild(this.parentElement)" style="margin-top:12px;padding:6px 12px;">Close</button>
   `;
   document.body.appendChild(popup);
 }
-
 </script>
 </head>
 <body>
 <h1>Eaglercraft Version Archive</h1>
 <div class="container">
 
+<!-- Örnek Kartlar -->
 <article class="card">
   <span class="badge">Release</span>
   <h3>1.12.2</h3>
   <div>Author: PeytonPlayz585</div>
-  <a class="btn play" href="javascript:showPopup('release/1.12.2.html')">PLAY</a>
-  <a class="btn download" href="javascript:showPopup('release/1.12.2.html')">DOWNLOAD</a>
+  <a class="btn play" href="javascript:showPopup('release/1.12.2.html', 'play')">PLAY</a>
+  <a class="btn download" href="javascript:showPopup('release/1.12.2.html', 'download')">DOWNLOAD</a>
 </article>
 
 <article class="card">
   <span class="badge">Release</span>
   <h3>1.8.8</h3>
   <div>Author: Ayunami2000 & lax1dude</div>
-  <a class="btn play" href="javascript:showPopup('release/1.8.8.html')">PLAY</a>
-  <a class="btn download" href="javascript:showPopup('release/1.8.8.html')">DOWNLOAD</a>
+  <a class="btn play" href="javascript:showPopup('release/1.8.8.html', 'play')">PLAY</a>
+  <a class="btn download" href="javascript:showPopup('release/1.8.8.html', 'download')">DOWNLOAD</a>
 </article>
 
 <article class="card">
